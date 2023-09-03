@@ -40,7 +40,9 @@ dependencies:
   google_fonts: any
   path: any
   liquid_swipe: ^3.1.0
+  sqflite: any
   http: any
+  slide_to_act: any
 
 dev_dependencies:
   flutter_test:
@@ -70,6 +72,14 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
       - lib/views/assets/
+      - lib/JSON/famous_quotes_json.json
+      - lib/JSON/friendship_quotes_json.json
+      - lib/JSON/funny_quotes_json.json
+      - lib/JSON/inspirational_quotes_json.json
+      - lib/JSON/love_quotes_json.json
+      - lib/JSON/motivational_quotes_json.json
+      - lib/JSON/sad_quotes_json.json
+      - lib/JSON/wisdom_quotes_json.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
