@@ -5,6 +5,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:share_plus/share_plus.dart';
+
+
+import 'package:tcard/tcard.dart';
+
 
 import '../../helpers/Database_helper.dart';
 
@@ -21,63 +26,82 @@ class C1_page extends StatelessWidget {
       appBar: AppBar(
 
       ),
-      body: GridView.builder(
-        itemCount: my_first_getx_controller.all_inspirational_Quotes.length,
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 1,mainAxisSpacing: 10,crossAxisSpacing: 10,childAspectRatio: 4/3), itemBuilder: (context, index) => Stack
-        (
-        alignment: Alignment.center,
+      body:TCard(
+          size: Size(600, 600),
+        cards:List.generate(my_first_getx_controller.all_inspirational_Quotes.length, (index) {
+         return Stack
+            (
+            alignment: Alignment.center,
             children: [
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Container(
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(15),
-            child: Opacity(
-          opacity: 0.5,
-            child: Image.asset("${my_first_getx_controller.bg[index%30]}"))),
-      ),
+                child: Card(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15)
+                    ),
+                    height: 700,
+                    width: 700,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(15),
+                        child: Opacity(
+                          opacity: 1,
+                            child: Image.asset("${my_first_getx_controller.bg[index%30]}",fit: BoxFit.fitHeight,))),
+                  ),
+                ),
               ),
               Padding(
-                padding: const EdgeInsets.all(20),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text("${my_first_getx_controller.all_inspirational_Quotes[index].quote}",style: GoogleFonts.poppins(fontSize: 16,fontWeight: FontWeight.bold),),
-                    SizedBox(height: 20,),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text("${my_first_getx_controller.all_inspirational_Quotes[index].author}",style: GoogleFonts.poppins(fontSize: 14,fontWeight: FontWeight.w600),)
-                      ],
-                    ),
-                    SizedBox(height: 10,),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                       IconButton(onPressed: (){
-                         Get.dialog(AlertDialog(
-                           title: Text("You Liked ${index+1} Quote",style: GoogleFonts.poppins(),),
-                           content:  Padding(
-                             padding: const EdgeInsets.only(right: 20),
-                             child: Image.asset("lib/views/assets/heart.gif",width:250,),
-                           ),
-                           actions: [
-                             SizedBox(height: 20,),
-                             ElevatedButton(onPressed: ()async{
-                               int id = await DBHelper.dbhelper.quotes_insert(
-                                   quotes_modal:quotes_modals);
-                               Get.snackbar("Quote added !!", "Id: $id");
-                             }, child: Text("Done")),
-                           ],
-                         ));
-                       }, icon: Icon(Icons.favorite_border,size: 30,)),
-                      ],
-                    ),
-                  ],
+                padding: const EdgeInsets.all(30),
+                child: SingleChildScrollView(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text("${my_first_getx_controller.all_inspirational_Quotes[index].quote}",style: GoogleFonts.poppins(fontSize: 25,fontWeight: FontWeight.bold,color: Colors.white),),
+                      SizedBox(height: 50,),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text("${my_first_getx_controller.all_inspirational_Quotes[index].author}",style: GoogleFonts.poppins(fontSize: 20,fontWeight: FontWeight.w600,color: Colors.white),)
+                        ],
+                      ),
+                      SizedBox(height: 100,),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          IconButton(onPressed: (){
+                            Share.share(
+                                my_first_getx_controller.all_inspirational_Quotes[index].quote!,
+                                subject: my_first_getx_controller.all_inspirational_Quotes[index].author!
+                            );
+                          }, icon: Icon(Icons.ios_share_outlined,size: 30,color: Colors.white,)),
+                          SizedBox(width: 30,),
+                          IconButton(onPressed: (){
+                            Get.dialog(AlertDialog(
+                              title: Text("You Liked ${index+1} Quote",style: GoogleFonts.poppins(),),
+                              content:  Padding(
+                                padding: const EdgeInsets.only(right: 20),
+                                child: Image.asset("lib/views/assets/heart.gif",width:250,),
+                              ),
+                              actions: [
+                                SizedBox(height: 20,),
+                                ElevatedButton(onPressed: ()async{
+                                  int id = await DBHelper.dbhelper.quotes_insert(
+                                      quotes_modal:quotes_modals);
+                                  Get.snackbar("Quote added !!", "Id: $id");
+                                }, child: Text("Done")),
+                              ],
+                            ));
+                          }, icon: Icon(Icons.favorite_border,size: 30,color: Colors.white,)),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],
-          ),)
+          );
+        })
+      )
       );
   }
 }
