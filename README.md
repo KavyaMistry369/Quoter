@@ -60,17 +60,28 @@ even set it as their device wallpaper.
 
 
 
-https://github.com/KavyaMistry369/db_miner/assets/130814792/e9d5075d-db9d-4165-82f0-9ac976e0be6e
 
 
-<img src="https://github.com/KavyaMistry369/db_miner/assets/130814792/808fac7f-9b77-4ba9-8d5e-19252aab86f6" width="350px">
-<img src="https://github.com/KavyaMistry369/db_miner/assets/130814792/c96add72-e395-4bc0-85e5-73aee9cf9ca6" width="350px">
-<img src="https://github.com/KavyaMistry369/db_miner/assets/130814792/da2e8061-9249-46f1-a2f4-be3db25f79be" width="350px">
-<img src="(https://github.com/KavyaMistry369/db_miner/assets/130814792/824ae9fe-f1b9-4149-8747-3cffd95fbb51" width="350px">
-<img src="https://github.com/KavyaMistry369/db_miner/assets/130814792/b3d8de48-615b-4592-9162-4852986ce653" width="350px">
-<img src="https://github.com/KavyaMistry369/db_miner/assets/130814792/86ec7a7a-ba16-408a-b9df-cbd95604ab7b" width="350px">
-<img src="https://github.com/KavyaMistry369/db_miner/assets/130814792/1a7dd7c5-a7b7-4c24-ba12-973e88f86f6f" width="350px">
-<img src="https://github.com/KavyaMistry369/db_miner/assets/130814792/ab461ab0-3e92-41cf-b243-979250886c43" width="350px">
+https://github.com/KavyaMistry369/db_miner_final/assets/130814792/5f32d736-3168-4e8f-8d2c-e870f5422f98
+
+
+
+
+<img src="https://github.com/KavyaMistry369/db_miner_final/assets/130814792/f53e7a2b-cf9f-4a41-85cc-3cbeeabd431d" width="350px">
+<img src="https://github.com/KavyaMistry369/db_miner_final/assets/130814792/22b02910-218d-4f82-b51c-428291089ae9" width="350px">
+<img src="https://github.com/KavyaMistry369/db_miner_final/assets/130814792/a98facd2-b2f0-4ea7-b1d3-2dcb7f495ca3" width="350px">
+<img src="https://github.com/KavyaMistry369/db_miner_final/assets/130814792/981f51f4-e277-4f98-ba0f-db1c15ba75fd" width="350px">
+<img src="https://github.com/KavyaMistry369/db_miner_final/assets/130814792/20e96341-0cad-4704-94e5-0d4941007f4d" width="350px">
+<img src="https://github.com/KavyaMistry369/db_miner_final/assets/130814792/3d120759-6383-4d8c-988a-6be4e14907d6" width="350px">
+<img src="https://github.com/KavyaMistry369/db_miner_final/assets/130814792/ba07bda7-661d-414c-b7d4-eb79c227996a" width="350px">
+<img src="https://github.com/KavyaMistry369/db_miner_final/assets/130814792/fb0ceaea-0268-44df-ac72-cb8adf9fc660" width="350px">
+<img src="https://github.com/KavyaMistry369/db_miner_final/assets/130814792/2221a3f8-33b0-456f-b749-8bf3bacae1a0" width="350px">
+<img src="https://github.com/KavyaMistry369/db_miner_final/assets/130814792/edea1bfc-2b45-4632-aaec-7423e29f80e0" width="350px">
+
+
+
+
+
 
 
 
